@@ -140,4 +140,4 @@ ROSMSG.addToJson = function (json, key, value) {
 	return json;
 }
 
-ROSMSG.parse("common_msgs");
+ROSMSG.parse("common_msgs", "common_msgs_json");
