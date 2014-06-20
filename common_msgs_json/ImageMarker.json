@@ -1,0 +1,103 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/ImageMarker.msg",
+    "CIRCLE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "LINE_STRIP": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "LINE_LIST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "2"
+    },
+    "POLYGON": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "3"
+    },
+    "POINTS": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "4"
+    },
+    "ADD": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "REMOVE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "ns": {
+        "type": "string",
+        "comment": " namespace, used with id to form a unique id",
+        "constant": ""
+    },
+    "id": {
+        "type": "int32",
+        "comment": " unique id within the namespace",
+        "constant": ""
+    },
+    "type": {
+        "type": "int32",
+        "comment": " CIRCLE/LINE_STRIP/etc.",
+        "constant": ""
+    },
+    "action": {
+        "type": "int32",
+        "comment": " ADD/REMOVE",
+        "constant": ""
+    },
+    "position": {
+        "type": "geometry_msgs/Point",
+        "comment": " 2D, in pixel-coords",
+        "constant": ""
+    },
+    "scale": {
+        "type": "float32",
+        "comment": " the diameter for a circle, etc.",
+        "constant": ""
+    },
+    "outline_color": {
+        "type": "std_msgs/ColorRGBA",
+        "comment": "",
+        "constant": ""
+    },
+    "filled": {
+        "type": "uint8",
+        "comment": " whether to fill in the shape with color",
+        "constant": ""
+    },
+    "fill_color": {
+        "type": "std_msgs/ColorRGBA",
+        "comment": " color [0.0-1.0]",
+        "constant": ""
+    },
+    "lifetime": {
+        "type": "duration",
+        "comment": " How long the object should last before being automatically deleted.  0 means forever",
+        "constant": ""
+    },
+    "points": {
+        "type": "geometry_msgs/Point[]",
+        "comment": " used for LINE_STRIP/LINE_LIST/POINTS/etc., 2D in pixel coords",
+        "constant": ""
+    },
+    "outline_colors": {
+        "type": "std_msgs/ColorRGBA[]",
+        "comment": " a color for each line, point, etc.",
+        "constant": ""
+    }
+}

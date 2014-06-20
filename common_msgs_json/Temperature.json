@@ -1,0 +1,23 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/Temperature.msg",
+    "": {
+        "type": "#",
+        "comment": " frame_id is the location of the temperature reading",
+        "constant": ""
+    },
+    "r header": {
+        "type": "Header",
+        "comment": " timestamp is the time the temperature was measured",
+        "constant": ""
+    },
+    "4 temperature": {
+        "type": "float64",
+        "comment": " Measurement of the Temperature in Degrees Celsius",
+        "constant": ""
+    },
+    "4 variance": {
+        "type": "float64",
+        "comment": " 0 is interpreted as variance unknown",
+        "constant": ""
+    }
+}

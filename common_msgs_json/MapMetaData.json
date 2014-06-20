@@ -1,0 +1,37 @@
+{
+    "$file": "common_msgs/nav_msgs/msg/MapMetaData.msg",
+    "#": [
+        " This hold basic information about the characterists of the OccupancyGrid",
+        " The time at which the map was loaded",
+        " The map resolution [m/cell]",
+        " Map width [cells]",
+        " Map height [cells]",
+        " The origin of the map [m, m, rad].  This is the real-world pose of the",
+        " cell (0,0) in the map."
+    ],
+    "map_load_time": {
+        "type": "time",
+        "comment": "",
+        "constant": ""
+    },
+    "resolution": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "width": {
+        "type": "uint32",
+        "comment": "",
+        "constant": ""
+    },
+    "height": {
+        "type": "uint32",
+        "comment": "",
+        "constant": ""
+    },
+    "origin": {
+        "type": "geometry_msgs/Pose",
+        "comment": "",
+        "constant": ""
+    }
+}

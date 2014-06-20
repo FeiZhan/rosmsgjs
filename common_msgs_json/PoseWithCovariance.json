@@ -1,0 +1,20 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/PoseWithCovariance.msg",
+    "#": [
+        " This represents a pose in free space with uncertainty.",
+        " Row-major representation of the 6x6 covariance matrix",
+        " The orientation parameters use a fixed-axis representation.",
+        " In order, the parameters are:",
+        " (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)"
+    ],
+    "pose": {
+        "type": "Pose",
+        "comment": "",
+        "constant": ""
+    },
+    "covariance": {
+        "type": "float64[36]",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/RelativeHumidity.msg",
+    "": {
+        "type": "#",
+        "comment": " 1.0 represents partial pressure of saturation",
+        "constant": ""
+    },
+    "r header": {
+        "type": "Header",
+        "comment": " timestamp of the measurement",
+        "constant": ""
+    },
+    "4 relative_humidity": {
+        "type": "float64",
+        "comment": " Expression of the relative humidity",
+        "constant": ""
+    },
+    "4 variance": {
+        "type": "float64",
+        "comment": " 0 is interpreted as variance unknown",
+        "constant": ""
+    }
+}

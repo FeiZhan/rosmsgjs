@@ -1,0 +1,67 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/PointField.msg",
+    "#": [
+        " This message holds the description of one point entry in the",
+        " PointCloud2 message format."
+    ],
+    "INT8": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 1"
+    },
+    "UINT8": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 2"
+    },
+    "INT16": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 3"
+    },
+    "UINT16": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 4"
+    },
+    "INT32": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 5"
+    },
+    "UINT32": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 6"
+    },
+    "FLOAT32": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 7"
+    },
+    "FLOAT64": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 8"
+    },
+    "name": {
+        "type": "string",
+        "comment": " Name of field",
+        "constant": ""
+    },
+    "offset": {
+        "type": "uint32",
+        "comment": " Offset from start of point struct",
+        "constant": ""
+    },
+    "datatype": {
+        "type": "uint8",
+        "comment": " Datatype enumeration, see above",
+        "constant": ""
+    },
+    "count": {
+        "type": "uint32",
+        "comment": " How many elements in the field",
+        "constant": ""
+    }
+}

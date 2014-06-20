@@ -1,0 +1,13 @@
+{
+    "$file": "common_msgs/diagnostic_msgs/msg/KeyValue.msg",
+    "key": {
+        "type": "string",
+        "comment": " what to label this value when viewing",
+        "constant": ""
+    },
+    "value": {
+        "type": "string",
+        "comment": " a value to track over time",
+        "constant": ""
+    }
+}

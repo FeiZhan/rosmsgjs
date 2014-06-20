@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/PoseWithCovarianceStamped.msg",
+    "#": " This expresses an estimated pose with a reference coordinate frame and timestamp",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "pose": {
+        "type": "PoseWithCovariance",
+        "comment": "",
+        "constant": ""
+    }
+}

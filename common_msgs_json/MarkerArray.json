@@ -1,0 +1,8 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/MarkerArray.msg",
+    "markers": {
+        "type": "Marker[]",
+        "comment": "",
+        "constant": ""
+    }
+}

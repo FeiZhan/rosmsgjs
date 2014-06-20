@@ -1,0 +1,91 @@
+{
+    "$file": "common_msgs/shape_msgs/msg/SolidPrimitive.msg",
+    "#": [
+        " Define box, sphere, cylinder, cone ",
+        " All shapes are defined to have their bounding boxes centered around 0,0,0.",
+        " The type of the shape",
+        " The dimensions of the shape",
+        " The meaning of the shape dimensions: each constant defines the index in the 'dimensions' array",
+        " For the BOX type, the X, Y, and Z dimensions are the length of the corresponding",
+        " sides of the box.",
+        " For the SPHERE type, only one component is used, and it gives the radius of",
+        " the sphere.",
+        " For the CYLINDER and CONE types, the center line is oriented along",
+        " the Z axis.  Therefore the CYLINDER_HEIGHT (CONE_HEIGHT) component",
+        " of dimensions gives the height of the cylinder (cone).  The",
+        " CYLINDER_RADIUS (CONE_RADIUS) component of dimensions gives the",
+        " radius of the base of the cylinder (cone).  Cone and cylinder",
+        " primitives are defined to be circular. The tip of the cone is",
+        " pointing up, along +Z axis."
+    ],
+    "BOX": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "SPHERE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "2"
+    },
+    "CYLINDER": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "3"
+    },
+    "CONE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "4"
+    },
+    "type": {
+        "type": "uint8",
+        "comment": "",
+        "constant": ""
+    },
+    "dimensions": {
+        "type": "float64[]",
+        "comment": "",
+        "constant": ""
+    },
+    "BOX_X": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "BOX_Y": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "BOX_Z": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "2"
+    },
+    "SPHERE_RADIUS": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "CYLINDER_HEIGHT": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "CYLINDER_RADIUS": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "CONE_HEIGHT": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "CONE_RADIUS": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    }
+}

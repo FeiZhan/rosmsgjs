@@ -1,0 +1,27 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Point32.msg",
+    "#": [
+        " This contains the position of a point in free space(with 32 bits of precision).",
+        " It is recommeded to use Point wherever possible instead of Point32.  ",
+        " ",
+        " This recommendation is to promote interoperability.  ",
+        "",
+        " This message is designed to take up less space when sending",
+        " lots of points at once, as in the case of a PointCloud.  "
+    ],
+    "x": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "y": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "z": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    }
+}

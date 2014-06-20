@@ -1,0 +1,19 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Point.msg",
+    "#": " This contains the position of a point in free space",
+    "x": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "y": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "z": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    }
+}

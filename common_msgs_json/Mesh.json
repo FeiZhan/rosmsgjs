@@ -1,0 +1,18 @@
+{
+    "$file": "common_msgs/shape_msgs/msg/Mesh.msg",
+    "#": [
+        " Definition of a mesh",
+        " list of triangles; the index values refer to positions in vertices[]",
+        " the actual vertices that make up the mesh"
+    ],
+    "triangles": {
+        "type": "MeshTriangle[]",
+        "comment": "",
+        "constant": ""
+    },
+    "vertices": {
+        "type": "geometry_msgs/Point[]",
+        "comment": "",
+        "constant": ""
+    }
+}

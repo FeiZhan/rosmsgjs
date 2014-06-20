@@ -1,0 +1,51 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/Image.msg",
+    "#": [
+        " This message contains an uncompressed image",
+        " (0, 0) is at top-left corner of image",
+        "",
+        " The legal values for encoding are in file src/image_encodings.cpp",
+        " If you want to standardize a new string format, join",
+        " ros-users@lists.sourceforge.net and send an email proposing a new encoding."
+    ],
+    "header": {
+        "type": "Header",
+        "comment": " Header timestamp should be acquisition time of image",
+        "constant": ""
+    },
+    "": {
+        "type": "#",
+        "comment": " taken from the list of strings in include/sensor_msgs/image_encodings.h",
+        "constant": ""
+    },
+    "height": {
+        "type": "uint32",
+        "comment": " image height, that is, number of rows",
+        "constant": ""
+    },
+    "width": {
+        "type": "uint32",
+        "comment": " image width, that is, number of columns",
+        "constant": ""
+    },
+    "encoding": {
+        "type": "string",
+        "comment": " Encoding of pixels -- channel meaning, ordering, size",
+        "constant": ""
+    },
+    "is_bigendian": {
+        "type": "uint8",
+        "comment": " is this data bigendian?",
+        "constant": ""
+    },
+    "step": {
+        "type": "uint32",
+        "comment": " Full row length in bytes",
+        "constant": ""
+    },
+    "data": {
+        "type": "uint8[]",
+        "comment": " actual matrix data, size is (step * rows)",
+        "constant": ""
+    }
+}

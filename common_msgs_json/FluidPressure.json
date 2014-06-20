@@ -1,0 +1,23 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/FluidPressure.msg",
+    "": {
+        "type": "#",
+        "comment": " frame_id is the location of the pressure sensor",
+        "constant": ""
+    },
+    "r header": {
+        "type": "Header",
+        "comment": " timestamp of the measurement",
+        "constant": ""
+    },
+    "4 fluid_pressure": {
+        "type": "float64",
+        "comment": " Absolute pressure reading in Pascals.",
+        "constant": ""
+    },
+    "4 variance": {
+        "type": "float64",
+        "comment": " 0 is interpreted as variance unknown",
+        "constant": ""
+    }
+}

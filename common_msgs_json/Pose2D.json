@@ -1,0 +1,19 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Pose2D.msg",
+    "#": " This expresses a position and orientation on a 2D manifold.",
+    "x": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "y": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "theta": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    }
+}

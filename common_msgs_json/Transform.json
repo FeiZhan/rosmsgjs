@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Transform.msg",
+    "#": " This represents the transform between two coordinate frames in free space.",
+    "translation": {
+        "type": "Vector3",
+        "comment": "",
+        "constant": ""
+    },
+    "rotation": {
+        "type": "Quaternion",
+        "comment": "",
+        "constant": ""
+    }
+}

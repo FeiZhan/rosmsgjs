@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/PoseArray.msg",
+    "#": " An array of poses with a header for global reference.",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "poses": {
+        "type": "Pose[]",
+        "comment": "",
+        "constant": ""
+    }
+}

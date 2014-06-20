@@ -1,0 +1,24 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/CompressedImage.msg",
+    "#": " This message contains a compressed image",
+    "header": {
+        "type": "Header",
+        "comment": " Header timestamp should be acquisition time of image",
+        "constant": ""
+    },
+    "": {
+        "type": "#",
+        "comment": "     jpeg, png",
+        "constant": ""
+    },
+    "format": {
+        "type": "string",
+        "comment": " Specifies the format of the data",
+        "constant": ""
+    },
+    "data": {
+        "type": "uint8[]",
+        "comment": " Compressed image buffer",
+        "constant": ""
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/JoyFeedbackArray.msg",
+    "#": " This message publishes values for multiple feedback at once. ",
+    "array": {
+        "type": "JoyFeedback[]",
+        "comment": "",
+        "constant": ""
+    }
+}

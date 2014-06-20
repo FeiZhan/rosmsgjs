@@ -1,0 +1,26 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/TransformStamped.msg",
+    "#": [
+        " This expresses a transform from coordinate frame header.frame_id",
+        " to the coordinate frame child_frame_id",
+        "",
+        " This message is mostly used by the ",
+        " <a href=\"http://www.ros.org/wiki/tf\">tf</a> package. ",
+        " See its documentation for more information."
+    ],
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "child_frame_id": {
+        "type": "string",
+        "comment": " the frame id of the child frame",
+        "constant": ""
+    },
+    "transform": {
+        "type": "Transform",
+        "comment": "",
+        "constant": ""
+    }
+}

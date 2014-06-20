@@ -1,0 +1,28 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/MagneticField.msg",
+    "": {
+        "type": "#",
+        "comment": " 0 is interpreted as variance unknown",
+        "constant": ""
+    },
+    "t put those along the diagonal)": {
+        "type": "#just",
+        "comment": "",
+        "constant": ""
+    },
+    "r header": {
+        "type": "Header",
+        "comment": " timestamp is the time the",
+        "constant": ""
+    },
+    "3 magnetic_field": {
+        "type": "geometry_msgs/Vector3",
+        "comment": " x, y, and z components of the",
+        "constant": ""
+    },
+    "] magnetic_field_covariance": {
+        "type": "float64[9]",
+        "comment": " Row major about x, y, z axes",
+        "constant": ""
+    }
+}

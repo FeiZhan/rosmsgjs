@@ -1,0 +1,9 @@
+{
+    "$file": "common_msgs/shape_msgs/msg/MeshTriangle.msg",
+    "#": " Definition of a triangle's vertices",
+    "vertex_indices": {
+        "type": "uint32[3]",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/Joy.msg",
+    "#": " Reports the state of a joysticks axes and buttons.",
+    "header": {
+        "type": "Header",
+        "comment": " timestamp in the header is the time the data is received from the joystick",
+        "constant": ""
+    },
+    "axes": {
+        "type": "float32[]",
+        "comment": " the axes measurements from a joystick",
+        "constant": ""
+    },
+    "buttons": {
+        "type": "int32[]",
+        "comment": " the buttons measurements from a joystick ",
+        "constant": ""
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/LaserScan.msg",
+    "#": [
+        " Single scan from a planar laser range-finder",
+        "",
+        " If you have another ranging device with different behavior (e.g. a sonar",
+        " array), please find or create a different message, since applications",
+        " will make fairly laser-specific assumptions about this data"
+    ],
+    "header": {
+        "type": "Header",
+        "comment": " timestamp in the header is the acquisition time of ",
+        "constant": ""
+    },
+    "": {
+        "type": "#",
+        "comment": " the array empty.",
+        "constant": ""
+    },
+    "angle_min": {
+        "type": "float32",
+        "comment": " start angle of the scan [rad]",
+        "constant": ""
+    },
+    "angle_max": {
+        "type": "float32",
+        "comment": " end angle of the scan [rad]",
+        "constant": ""
+    },
+    "angle_increment": {
+        "type": "float32",
+        "comment": " angular distance between measurements [rad]",
+        "constant": ""
+    },
+    "time_increment": {
+        "type": "float32",
+        "comment": " time between measurements [seconds] - if your scanner",
+        "constant": ""
+    },
+    "scan_time": {
+        "type": "float32",
+        "comment": " time between scans [seconds]",
+        "constant": ""
+    },
+    "range_min": {
+        "type": "float32",
+        "comment": " minimum range value [m]",
+        "constant": ""
+    },
+    "range_max": {
+        "type": "float32",
+        "comment": " maximum range value [m]",
+        "constant": ""
+    },
+    "ranges": {
+        "type": "float32[]",
+        "comment": " range data [m] (Note: values < range_min or > range_max should be discarded)",
+        "constant": ""
+    },
+    "intensities": {
+        "type": "float32[]",
+        "comment": " intensity data [device-specific units].  If your",
+        "constant": ""
+    }
+}

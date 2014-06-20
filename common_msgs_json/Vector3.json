@@ -1,0 +1,19 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Vector3.msg",
+    "#": " This represents a vector in free space. ",
+    "x": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "y": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "z": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Quaternion.msg",
+    "#": " This represents an orientation in free space in quaternion form.",
+    "x": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "y": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "z": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    },
+    "w": {
+        "type": "float64",
+        "comment": "",
+        "constant": ""
+    }
+}

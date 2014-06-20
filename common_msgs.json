@@ -1,0 +1,2967 @@
+[
+    {
+        "$file": "common_msgs/actionlib_msgs/msg/GoalID.msg",
+        "#": [
+            " The stamp should store the time at which this goal was requested.",
+            " It is used by an action server when it tries to preempt all",
+            " goals that were requested before a certain time",
+            " The id provides a way to associate feedback and",
+            " result message with specific goal requests. The id",
+            " specified must be unique."
+        ],
+        "stamp": {
+            "type": "time",
+            "comment": "",
+            "constant": ""
+        },
+        "id": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/actionlib_msgs/msg/GoalStatus.msg",
+        "goal_id": {
+            "type": "GoalID",
+            "comment": "",
+            "constant": ""
+        },
+        "status": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "PENDING": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0   # The goal has yet to be processed by the action server"
+        },
+        "ACTIVE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1   # The goal is currently being processed by the action server"
+        },
+        "PREEMPTED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2   # The goal received a cancel request after it started executing"
+        },
+        "": {
+            "type": "#",
+            "comment": "    sent over the wire by an action server",
+            "constant": ""
+        },
+        "SUCCEEDED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 3   # The goal was achieved successfully by the action server (Terminal State)"
+        },
+        "ABORTED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 4   # The goal was aborted during execution by the action server due"
+        },
+        "REJECTED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 5   # The goal was rejected by the action server without being processed,"
+        },
+        "PREEMPTING": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 6   # The goal received a cancel request after it started executing"
+        },
+        "RECALLING": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 7   # The goal received a cancel request before it started executing,"
+        },
+        "RECALLED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 8   # The goal received a cancel request before it started executing"
+        },
+        "LOST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 9   # An action client can determine that a goal is LOST. This should not be"
+        },
+        "#": "Allow for the user to associate a string with GoalStatus for debugging",
+        "text": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/actionlib_msgs/msg/GoalStatusArray.msg",
+        "#": [
+            " Stores the statuses for goals that are currently being tracked",
+            " by an action server"
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "status_list": {
+            "type": "GoalStatus[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/diagnostic_msgs/msg/DiagnosticArray.msg",
+        "#": " This message is used to send diagnostic information about the state of the robot",
+        "header": {
+            "type": "Header",
+            "comment": "for timestamp",
+            "constant": ""
+        },
+        "status": {
+            "type": "DiagnosticStatus[]",
+            "comment": " an array of components being reported on",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/diagnostic_msgs/msg/DiagnosticStatus.msg",
+        "#": [
+            " This message holds the status of an individual component of the robot.",
+            " ",
+            " Possible levels of operations"
+        ],
+        "OK": {
+            "type": "byte",
+            "comment": "",
+            "constant": "0"
+        },
+        "WARN": {
+            "type": "byte",
+            "comment": "",
+            "constant": "1"
+        },
+        "ERROR": {
+            "type": "byte",
+            "comment": "",
+            "constant": "2"
+        },
+        "STALE": {
+            "type": "byte",
+            "comment": "",
+            "constant": "3"
+        },
+        "level": {
+            "type": "byte",
+            "comment": " level of operation enumerated above ",
+            "constant": ""
+        },
+        "name": {
+            "type": "string",
+            "comment": " a description of the test/component reporting",
+            "constant": ""
+        },
+        "message": {
+            "type": "string",
+            "comment": " a description of the status",
+            "constant": ""
+        },
+        "hardware_id": {
+            "type": "string",
+            "comment": " a hardware unique string",
+            "constant": ""
+        },
+        "values": {
+            "type": "KeyValue[]",
+            "comment": " an array of values associated with the status",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/diagnostic_msgs/msg/KeyValue.msg",
+        "key": {
+            "type": "string",
+            "comment": " what to label this value when viewing",
+            "constant": ""
+        },
+        "value": {
+            "type": "string",
+            "comment": " a value to track over time",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Point.msg",
+        "#": " This contains the position of a point in free space",
+        "x": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "y": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "z": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Point32.msg",
+        "#": [
+            " This contains the position of a point in free space(with 32 bits of precision).",
+            " It is recommeded to use Point wherever possible instead of Point32.  ",
+            " ",
+            " This recommendation is to promote interoperability.  ",
+            "",
+            " This message is designed to take up less space when sending",
+            " lots of points at once, as in the case of a PointCloud.  "
+        ],
+        "x": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "y": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "z": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PointStamped.msg",
+        "#": " This represents a Point with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "point": {
+            "type": "Point",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Polygon.msg",
+        "#": "A specification of a polygon where the first and last points are assumed to be connected",
+        "points": {
+            "type": "Point32[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PolygonStamped.msg",
+        "#": " This represents a Polygon with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "polygon": {
+            "type": "Polygon",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Pose.msg",
+        "#": " A representation of pose in free space, composed of postion and orientation. ",
+        "position": {
+            "type": "Point",
+            "comment": "",
+            "constant": ""
+        },
+        "orientation": {
+            "type": "Quaternion",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Pose2D.msg",
+        "#": " This expresses a position and orientation on a 2D manifold.",
+        "x": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "y": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "theta": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PoseArray.msg",
+        "#": " An array of poses with a header for global reference.",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "poses": {
+            "type": "Pose[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PoseStamped.msg",
+        "#": " A Pose with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "Pose",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PoseWithCovariance.msg",
+        "#": [
+            " This represents a pose in free space with uncertainty.",
+            " Row-major representation of the 6x6 covariance matrix",
+            " The orientation parameters use a fixed-axis representation.",
+            " In order, the parameters are:",
+            " (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)"
+        ],
+        "pose": {
+            "type": "Pose",
+            "comment": "",
+            "constant": ""
+        },
+        "covariance": {
+            "type": "float64[36]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/PoseWithCovarianceStamped.msg",
+        "#": " This expresses an estimated pose with a reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "PoseWithCovariance",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Quaternion.msg",
+        "#": " This represents an orientation in free space in quaternion form.",
+        "x": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "y": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "z": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "w": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/QuaternionStamped.msg",
+        "#": " This represents an orientation with reference coordinate frame and timestamp.",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "quaternion": {
+            "type": "Quaternion",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Transform.msg",
+        "#": " This represents the transform between two coordinate frames in free space.",
+        "translation": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        },
+        "rotation": {
+            "type": "Quaternion",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/TransformStamped.msg",
+        "#": [
+            " This expresses a transform from coordinate frame header.frame_id",
+            " to the coordinate frame child_frame_id",
+            "",
+            " This message is mostly used by the ",
+            " <a href=\"http://www.ros.org/wiki/tf\">tf</a> package. ",
+            " See its documentation for more information."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "child_frame_id": {
+            "type": "string",
+            "comment": " the frame id of the child frame",
+            "constant": ""
+        },
+        "transform": {
+            "type": "Transform",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Twist.msg",
+        "#": " This expresses velocity in free space broken into its linear and angular parts.",
+        "linear": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        },
+        "angular": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/TwistStamped.msg",
+        "#": " A twist with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "twist": {
+            "type": "Twist",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/TwistWithCovariance.msg",
+        "#": [
+            " This expresses velocity in free space with uncertainty.",
+            " Row-major representation of the 6x6 covariance matrix",
+            " The orientation parameters use a fixed-axis representation.",
+            " In order, the parameters are:",
+            " (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)"
+        ],
+        "twist": {
+            "type": "Twist",
+            "comment": "",
+            "constant": ""
+        },
+        "covariance": {
+            "type": "float64[36]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/TwistWithCovarianceStamped.msg",
+        "#": " This represents an estimated twist with reference coordinate frame and timestamp.",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "twist": {
+            "type": "TwistWithCovariance",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Vector3.msg",
+        "#": " This represents a vector in free space. ",
+        "x": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "y": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "z": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Vector3Stamped.msg",
+        "#": " This represents a Vector3 with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "vector": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/Wrench.msg",
+        "#": [
+            " This represents force in free space, separated into",
+            " its linear and angular parts."
+        ],
+        "force": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        },
+        "torque": {
+            "type": "Vector3",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/geometry_msgs/msg/WrenchStamped.msg",
+        "#": " A wrench with reference coordinate frame and timestamp",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "wrench": {
+            "type": "Wrench",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/nav_msgs/msg/GridCells.msg",
+        "#": "an array of cells in a 2D grid",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "cell_width": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "cell_height": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "cells": {
+            "type": "geometry_msgs/Point[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/nav_msgs/msg/MapMetaData.msg",
+        "#": [
+            " This hold basic information about the characterists of the OccupancyGrid",
+            " The time at which the map was loaded",
+            " The map resolution [m/cell]",
+            " Map width [cells]",
+            " Map height [cells]",
+            " The origin of the map [m, m, rad].  This is the real-world pose of the",
+            " cell (0,0) in the map."
+        ],
+        "map_load_time": {
+            "type": "time",
+            "comment": "",
+            "constant": ""
+        },
+        "resolution": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "width": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "height": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "origin": {
+            "type": "geometry_msgs/Pose",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/nav_msgs/msg/OccupancyGrid.msg",
+        "#": [
+            " This represents a 2-D grid map, in which each cell represents the probability of",
+            " occupancy.",
+            "MetaData for the map",
+            " The map data, in row-major order, starting with (0,0).  Occupancy",
+            " probabilities are in the range [0,100].  Unknown is -1."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "info": {
+            "type": "MapMetaData",
+            "comment": "",
+            "constant": ""
+        },
+        "data": {
+            "type": "int8[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/nav_msgs/msg/Odometry.msg",
+        "#": [
+            " This represents an estimate of a position and velocity in free space.  ",
+            " The pose in this message should be specified in the coordinate frame given by header.frame_id.",
+            " The twist in this message should be specified in the coordinate frame given by the child_frame_id"
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "child_frame_id": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "geometry_msgs/PoseWithCovariance",
+            "comment": "",
+            "constant": ""
+        },
+        "twist": {
+            "type": "geometry_msgs/TwistWithCovariance",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/nav_msgs/msg/Path.msg",
+        "#": "An array of poses that represents a Path for a robot to follow",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "poses": {
+            "type": "geometry_msgs/PoseStamped[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/CameraInfo.msg",
+        "#": [
+            " This message defines meta information for a camera. It should be in a",
+            " camera namespace on topic \"camera_info\" and accompanied by up to five",
+            " image topics named:",
+            "",
+            "   image_raw - raw data from the camera driver, possibly Bayer encoded",
+            "   image            - monochrome, distorted",
+            "   image_color      - color, distorted",
+            "   image_rect       - monochrome, rectified",
+            "   image_rect_color - color, rectified",
+            "",
+            " The image_pipeline contains packages (image_proc, stereo_image_proc)",
+            " for producing the four processed image topics from image_raw and",
+            " camera_info. The meaning of the camera parameters are described in",
+            " detail at http://www.ros.org/wiki/image_pipeline/CameraInfo.",
+            "",
+            " The image_geometry package provides a user-friendly interface to",
+            " common operations using this meta information. If you want to, e.g.,",
+            " project a 3d point into image coordinates, we strongly recommend",
+            " using image_geometry.",
+            "",
+            " If the camera is uncalibrated, the matrices D, K, R, P should be left",
+            " zeroed out. In particular, clients may assume that K[0] == 0.0",
+            " indicates an uncalibrated camera.",
+            "######################################################################",
+            "                     Image acquisition info                          #",
+            "######################################################################",
+            " Time of image acquisition, camera coordinate frame ID",
+            "######################################################################",
+            "                      Calibration Parameters                         #",
+            "######################################################################",
+            " These are fixed during camera calibration. Their values will be the #",
+            " same in all messages until the camera is recalibrated. Note that    #",
+            " self-calibrating systems may \"recalibrate\" frequently.              #",
+            "                                                                     #",
+            " The internal parameters can be used to warp a raw (distorted) image #",
+            " to:                                                                 #",
+            "   1. An undistorted image (requires D and K)                        #",
+            "   2. A rectified image (requires D, K, R)                           #",
+            " The projection matrix P projects 3D points into the rectified image.#",
+            "######################################################################",
+            " The image dimensions with which the camera was calibrated. Normally",
+            " this will be the full camera resolution in pixels.",
+            " The distortion model used. Supported models are listed in",
+            " sensor_msgs/distortion_models.h. For most cameras, \"plumb_bob\" - a",
+            " simple model of radial and tangential distortion - is sufficent.",
+            " The distortion parameters, size depending on the distortion model.",
+            " For \"plumb_bob\", the 5 parameters are: (k1, k2, t1, t2, k3).",
+            " Intrinsic camera matrix for the raw (distorted) images.",
+            "     [fx  0 cx]",
+            " K = [ 0 fy cy]",
+            "     [ 0  0  1]",
+            " Projects 3D points in the camera coordinate frame to 2D pixel",
+            " coordinates using the focal lengths (fx, fy) and principal point",
+            " (cx, cy).",
+            " Rectification matrix (stereo cameras only)",
+            " A rotation matrix aligning the camera coordinate system to the ideal",
+            " stereo image plane so that epipolar lines in both stereo images are",
+            " parallel.",
+            " Projection/camera matrix",
+            "     [fx'  0  cx' Tx]",
+            " P = [ 0  fy' cy' Ty]",
+            "     [ 0   0   1   0]",
+            " By convention, this matrix specifies the intrinsic (camera) matrix",
+            "  of the processed (rectified) image. That is, the left 3x3 portion",
+            "  is the normal camera intrinsic matrix for the rectified image.",
+            " It projects 3D points in the camera coordinate frame to 2D pixel",
+            "  coordinates using the focal lengths (fx', fy') and principal point",
+            "  (cx', cy') - these may differ from the values in K.",
+            " For monocular cameras, Tx = Ty = 0. Normally, monocular cameras will",
+            "  also have R = the identity and P[1:3,1:3] = K.",
+            " For a stereo pair, the fourth column [Tx Ty 0]' is related to the",
+            "  position of the optical center of the second camera in the first",
+            "  camera's frame. We assume Tz = 0 so both cameras are in the same",
+            "  stereo image plane. The first camera always has Tx = Ty = 0. For",
+            "  the right (second) camera of a horizontal stereo pair, Ty = 0 and",
+            "  Tx = -fx' * B, where B is the baseline between the cameras.",
+            " Given a 3D point [X Y Z]', the projection (x, y) of the point onto",
+            "  the rectified image is given by:",
+            "  [u v w]' = P * [X Y Z 1]'",
+            "         x = u / w",
+            "         y = v / w",
+            "  This holds for both images of a stereo pair.",
+            "######################################################################",
+            "                      Operational Parameters                         #",
+            "######################################################################",
+            " These define the image region actually captured by the camera       #",
+            " driver. Although they affect the geometry of the output image, they #",
+            " may be changed freely without recalibrating the camera.             #",
+            "######################################################################",
+            " Binning refers here to any camera setting which combines rectangular",
+            "  neighborhoods of pixels into larger \"super-pixels.\" It reduces the",
+            "  resolution of the output image to",
+            "  (width / binning_x) x (height / binning_y).",
+            " The default values binning_x = binning_y = 0 is considered the same",
+            "  as binning_x = binning_y = 1 (no subsampling).",
+            " Region of interest (subwindow of full camera resolution), given in",
+            "  full resolution (unbinned) image coordinates. A particular ROI",
+            "  always denotes the same window of pixels on the camera sensor,",
+            "  regardless of binning settings.",
+            " The default setting of roi (all values 0) is considered the same as",
+            "  full resolution (roi.width = width, roi.height = height)."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": " Header timestamp should be acquisition time of image",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " +z should point into the plane of the image",
+            "constant": ""
+        },
+        "height": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "width": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "distortion_model": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "D": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "K": {
+            "type": "float64[9]",
+            "comment": " 3x3 row-major matrix",
+            "constant": ""
+        },
+        "R": {
+            "type": "float64[9]",
+            "comment": " 3x3 row-major matrix",
+            "constant": ""
+        },
+        "P": {
+            "type": "float64[12]",
+            "comment": " 3x4 row-major matrix",
+            "constant": ""
+        },
+        "binning_x": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "binning_y": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "roi": {
+            "type": "RegionOfInterest",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/ChannelFloat32.msg",
+        "#": [
+            " This message is used by the PointCloud message to hold optional data",
+            " associated with each point in the cloud. The length of the values",
+            " array should be the same as the length of the points array in the",
+            " PointCloud, and each value should be associated with the corresponding",
+            " point.",
+            " Channel names in existing practice include:",
+            "   \"u\", \"v\" - row and column (respectively) in the left stereo image.",
+            "              This is opposite to usual conventions but remains for",
+            "              historical reasons. The newer PointCloud2 message has no",
+            "              such problem.",
+            "   \"rgb\" - For point clouds produced by color stereo cameras. uint8",
+            "           (R,G,B) values packed into the least significant 24 bits,",
+            "           in order.",
+            "   \"intensity\" - laser or pixel intensity.",
+            "   \"distance\"",
+            " The channel name should give semantics of the channel (e.g.",
+            " \"intensity\" instead of \"value\").",
+            " The values array should be 1-1 with the elements of the associated",
+            " PointCloud."
+        ],
+        "name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "values": {
+            "type": "float32[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/CompressedImage.msg",
+        "#": " This message contains a compressed image",
+        "header": {
+            "type": "Header",
+            "comment": " Header timestamp should be acquisition time of image",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": "     jpeg, png",
+            "constant": ""
+        },
+        "format": {
+            "type": "string",
+            "comment": " Specifies the format of the data",
+            "constant": ""
+        },
+        "data": {
+            "type": "uint8[]",
+            "comment": " Compressed image buffer",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/FluidPressure.msg",
+        "": {
+            "type": "#",
+            "comment": " frame_id is the location of the pressure sensor",
+            "constant": ""
+        },
+        "r header": {
+            "type": "Header",
+            "comment": " timestamp of the measurement",
+            "constant": ""
+        },
+        "4 fluid_pressure": {
+            "type": "float64",
+            "comment": " Absolute pressure reading in Pascals.",
+            "constant": ""
+        },
+        "4 variance": {
+            "type": "float64",
+            "comment": " 0 is interpreted as variance unknown",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Illuminance.msg",
+        "": {
+            "type": "#",
+            "comment": " frame_id is the location and direction of the reading",
+            "constant": ""
+        },
+        "r header": {
+            "type": "Header",
+            "comment": " timestamp is the time the illuminance was measured",
+            "constant": ""
+        },
+        "4 illuminance": {
+            "type": "float64",
+            "comment": " Measurement of the Photometric Illuminance in Lux.",
+            "constant": ""
+        },
+        "4 variance": {
+            "type": "float64",
+            "comment": " 0 is interpreted as variance unknown",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Image.msg",
+        "#": [
+            " This message contains an uncompressed image",
+            " (0, 0) is at top-left corner of image",
+            "",
+            " The legal values for encoding are in file src/image_encodings.cpp",
+            " If you want to standardize a new string format, join",
+            " ros-users@lists.sourceforge.net and send an email proposing a new encoding."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": " Header timestamp should be acquisition time of image",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " taken from the list of strings in include/sensor_msgs/image_encodings.h",
+            "constant": ""
+        },
+        "height": {
+            "type": "uint32",
+            "comment": " image height, that is, number of rows",
+            "constant": ""
+        },
+        "width": {
+            "type": "uint32",
+            "comment": " image width, that is, number of columns",
+            "constant": ""
+        },
+        "encoding": {
+            "type": "string",
+            "comment": " Encoding of pixels -- channel meaning, ordering, size",
+            "constant": ""
+        },
+        "is_bigendian": {
+            "type": "uint8",
+            "comment": " is this data bigendian?",
+            "constant": ""
+        },
+        "step": {
+            "type": "uint32",
+            "comment": " Full row length in bytes",
+            "constant": ""
+        },
+        "data": {
+            "type": "uint8[]",
+            "comment": " actual matrix data, size is (step * rows)",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Imu.msg",
+        "#": [
+            " This is a message to hold data from an IMU (Inertial Measurement Unit)",
+            "",
+            " Accelerations should be in m/s^2 (not in g's), and rotational velocity should be in rad/sec",
+            "",
+            " If the covariance of the measurement is known, it should be filled in (if all you know is the ",
+            " variance of each measurement, e.g. from the datasheet, just put those along the diagonal)",
+            " A covariance matrix of all zeros will be interpreted as \"covariance unknown\", and to use the",
+            " data a covariance will have to be assumed or gotten from some other source",
+            "",
+            " If you have no estimate for one of the data elements (e.g. your IMU doesn't produce an orientation ",
+            " estimate), please set element 0 of the associated covariance matrix to -1",
+            " If you are interpreting this message, please check for a value of -1 in the first element of each ",
+            " covariance matrix, and disregard the associated estimate."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "orientation": {
+            "type": "geometry_msgs/Quaternion",
+            "comment": "",
+            "constant": ""
+        },
+        "orientation_covariance": {
+            "type": "float64[9]",
+            "comment": " Row major about x, y, z axes",
+            "constant": ""
+        },
+        "angular_velocity": {
+            "type": "geometry_msgs/Vector3",
+            "comment": "",
+            "constant": ""
+        },
+        "angular_velocity_covariance": {
+            "type": "float64[9]",
+            "comment": " Row major about x, y, z axes",
+            "constant": ""
+        },
+        "linear_acceleration": {
+            "type": "geometry_msgs/Vector3",
+            "comment": "",
+            "constant": ""
+        },
+        "linear_acceleration_covariance": {
+            "type": "float64[9]",
+            "comment": " Row major x, y z ",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/JointState.msg",
+        "#": [
+            " This is a message that holds data to describe the state of a set of torque controlled joints. ",
+            "",
+            " The state of each joint (revolute or prismatic) is defined by:",
+            "  * the position of the joint (rad or m),",
+            "  * the velocity of the joint (rad/s or m/s) and ",
+            "  * the effort that is applied in the joint (Nm or N).",
+            "",
+            " Each joint is uniquely identified by its name",
+            " The header specifies the time at which the joint states were recorded. All the joint states",
+            " in one message have to be recorded at the same time.",
+            "",
+            " This message consists of a multiple arrays, one for each part of the joint state. ",
+            " The goal is to make each of the fields optional. When e.g. your joints have no",
+            " effort associated with them, you can leave the effort array empty. ",
+            "",
+            " All arrays in this message should have the same size, or be empty.",
+            " This is the only way to uniquely associate the joint name with the correct",
+            " states."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "name": {
+            "type": "string[]",
+            "comment": "",
+            "constant": ""
+        },
+        "position": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "velocity": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "effort": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Joy.msg",
+        "#": " Reports the state of a joysticks axes and buttons.",
+        "header": {
+            "type": "Header",
+            "comment": " timestamp in the header is the time the data is received from the joystick",
+            "constant": ""
+        },
+        "axes": {
+            "type": "float32[]",
+            "comment": " the axes measurements from a joystick",
+            "constant": ""
+        },
+        "buttons": {
+            "type": "int32[]",
+            "comment": " the buttons measurements from a joystick ",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/JoyFeedback.msg",
+        "#": [
+            " Declare of the type of feedback",
+            " This will hold an id number for each type of each feedback.",
+            " Example, the first led would be id=0, the second would be id=1",
+            " Intensity of the feedback, from 0.0 to 1.0, inclusive.  If device is",
+            " actually binary, driver should treat 0<=x<0.5 as off, 0.5<=x<=1 as on."
+        ],
+        "TYPE_LED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0"
+        },
+        "TYPE_RUMBLE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "TYPE_BUZZER": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "id": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "intensity": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/JoyFeedbackArray.msg",
+        "#": " This message publishes values for multiple feedback at once. ",
+        "array": {
+            "type": "JoyFeedback[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/LaserEcho.msg",
+        "#": [
+            " This message is a submessage of MultiEchoLaserScan and is not intended",
+            " to be used separately."
+        ],
+        "echoes": {
+            "type": "float32[]",
+            "comment": " Multiple values of ranges or intensities.",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " Each array represents data from the same angle increment.",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/LaserScan.msg",
+        "#": [
+            " Single scan from a planar laser range-finder",
+            "",
+            " If you have another ranging device with different behavior (e.g. a sonar",
+            " array), please find or create a different message, since applications",
+            " will make fairly laser-specific assumptions about this data"
+        ],
+        "header": {
+            "type": "Header",
+            "comment": " timestamp in the header is the acquisition time of ",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " the array empty.",
+            "constant": ""
+        },
+        "angle_min": {
+            "type": "float32",
+            "comment": " start angle of the scan [rad]",
+            "constant": ""
+        },
+        "angle_max": {
+            "type": "float32",
+            "comment": " end angle of the scan [rad]",
+            "constant": ""
+        },
+        "angle_increment": {
+            "type": "float32",
+            "comment": " angular distance between measurements [rad]",
+            "constant": ""
+        },
+        "time_increment": {
+            "type": "float32",
+            "comment": " time between measurements [seconds] - if your scanner",
+            "constant": ""
+        },
+        "scan_time": {
+            "type": "float32",
+            "comment": " time between scans [seconds]",
+            "constant": ""
+        },
+        "range_min": {
+            "type": "float32",
+            "comment": " minimum range value [m]",
+            "constant": ""
+        },
+        "range_max": {
+            "type": "float32",
+            "comment": " maximum range value [m]",
+            "constant": ""
+        },
+        "ranges": {
+            "type": "float32[]",
+            "comment": " range data [m] (Note: values < range_min or > range_max should be discarded)",
+            "constant": ""
+        },
+        "intensities": {
+            "type": "float32[]",
+            "comment": " intensity data [device-specific units].  If your",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/MagneticField.msg",
+        "": {
+            "type": "#",
+            "comment": " 0 is interpreted as variance unknown",
+            "constant": ""
+        },
+        "t put those along the diagonal)": {
+            "type": "#just",
+            "comment": "",
+            "constant": ""
+        },
+        "r header": {
+            "type": "Header",
+            "comment": " timestamp is the time the",
+            "constant": ""
+        },
+        "3 magnetic_field": {
+            "type": "geometry_msgs/Vector3",
+            "comment": " x, y, and z components of the",
+            "constant": ""
+        },
+        "] magnetic_field_covariance": {
+            "type": "float64[9]",
+            "comment": " Row major about x, y, z axes",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/MultiDOFJointState.msg",
+        "#": [
+            " Representation of state for joints with multiple degrees of freedom, ",
+            " following the structure of JointState.",
+            "",
+            " It is assumed that a joint in a system corresponds to a transform that gets applied ",
+            " along the kinematic chain. For example, a planar joint (as in URDF) is 3DOF (x, y, yaw)",
+            " and those 3DOF can be expressed as a transformation matrix, and that transformation",
+            " matrix can be converted back to (x, y, yaw)",
+            "",
+            " Each joint is uniquely identified by its name",
+            " The header specifies the time at which the joint states were recorded. All the joint states",
+            " in one message have to be recorded at the same time.",
+            "",
+            " This message consists of a multiple arrays, one for each part of the joint state. ",
+            " The goal is to make each of the fields optional. When e.g. your joints have no",
+            " wrench associated with them, you can leave the wrench array empty. ",
+            "",
+            " All arrays in this message should have the same size, or be empty.",
+            " This is the only way to uniquely associate the joint name with the correct",
+            " states."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "joint_names": {
+            "type": "string[]",
+            "comment": "",
+            "constant": ""
+        },
+        "transforms": {
+            "type": "geometry_msgs/Transform[]",
+            "comment": "",
+            "constant": ""
+        },
+        "twist": {
+            "type": "geometry_msgs/Twist[]",
+            "comment": "",
+            "constant": ""
+        },
+        "wrench": {
+            "type": "geometry_msgs/Wrench[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/MultiEchoLaserScan.msg",
+        "#": [
+            " Single scan from a multi-echo planar laser range-finder",
+            "",
+            " If you have another ranging device with different behavior (e.g. a sonar",
+            " array), please find or create a different message, since applications",
+            " will make fairly laser-specific assumptions about this data"
+        ],
+        "header": {
+            "type": "Header",
+            "comment": " timestamp in the header is the acquisition time of ",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " the array empty.",
+            "constant": ""
+        },
+        "angle_min": {
+            "type": "float32",
+            "comment": " start angle of the scan [rad]",
+            "constant": ""
+        },
+        "angle_max": {
+            "type": "float32",
+            "comment": " end angle of the scan [rad]",
+            "constant": ""
+        },
+        "angle_increment": {
+            "type": "float32",
+            "comment": " angular distance between measurements [rad]",
+            "constant": ""
+        },
+        "time_increment": {
+            "type": "float32",
+            "comment": " time between measurements [seconds] - if your scanner",
+            "constant": ""
+        },
+        "scan_time": {
+            "type": "float32",
+            "comment": " time between scans [seconds]",
+            "constant": ""
+        },
+        "range_min": {
+            "type": "float32",
+            "comment": " minimum range value [m]",
+            "constant": ""
+        },
+        "range_max": {
+            "type": "float32",
+            "comment": " maximum range value [m]",
+            "constant": ""
+        },
+        "ranges": {
+            "type": "LaserEcho[]",
+            "comment": " range data [m] (Note: NaNs, values < range_min or > range_max should be discarded)",
+            "constant": ""
+        },
+        "intensities": {
+            "type": "LaserEcho[]",
+            "comment": " intensity data [device-specific units].  If your",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/NavSatFix.msg",
+        "#": [
+            " Navigation Satellite fix for any Global Navigation Satellite System",
+            "",
+            " Specified using the WGS 84 reference ellipsoid",
+            " header.stamp specifies the ROS time for this measurement (the",
+            "        corresponding satellite time may be reported using the",
+            "        sensor_msgs/TimeReference message).",
+            "",
+            " header.frame_id is the frame of reference reported by the satellite",
+            "        receiver, usually the location of the antenna.  This is a",
+            "        Euclidean frame relative to the vehicle, not a reference",
+            "        ellipsoid.",
+            " satellite fix status information",
+            " Latitude [degrees]. Positive is north of equator; negative is south.",
+            " Longitude [degrees]. Positive is east of prime meridian; negative is west.",
+            " Altitude [m]. Positive is above the WGS 84 ellipsoid",
+            " (quiet NaN if no altitude is available).",
+            " Position covariance [m^2] defined relative to a tangential plane",
+            " through the reported position. The components are East, North, and",
+            " Up (ENU), in row-major order.",
+            "",
+            " Beware: this coordinate system exhibits singularities at the poles.",
+            " If the covariance of the fix is known, fill it in completely. If the",
+            " GPS receiver provides the variance of each measurement, put them",
+            " along the diagonal. If only Dilution of Precision is available,",
+            " estimate an approximate covariance from that."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "status": {
+            "type": "NavSatStatus",
+            "comment": "",
+            "constant": ""
+        },
+        "latitude": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "longitude": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "altitude": {
+            "type": "float64",
+            "comment": "",
+            "constant": ""
+        },
+        "position_covariance": {
+            "type": "float64[9]",
+            "comment": "",
+            "constant": ""
+        },
+        "COVARIANCE_TYPE_UNKNOWN": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0"
+        },
+        "COVARIANCE_TYPE_APPROXIMATED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "COVARIANCE_TYPE_DIAGONAL_KNOWN": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "COVARIANCE_TYPE_KNOWN": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 3"
+        },
+        "position_covariance_type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/NavSatStatus.msg",
+        "#": [
+            " Navigation Satellite fix status for any Global Navigation Satellite System",
+            " Whether to output an augmented fix is determined by both the fix",
+            " type and the last time differential corrections were received.  A",
+            " fix is valid when status >= STATUS_FIX.",
+            " Bits defining which Global Navigation Satellite System signals were",
+            " used by the receiver."
+        ],
+        "STATUS_NO_FIX": {
+            "type": "int8",
+            "comment": "",
+            "constant": "  -1        # unable to fix position"
+        },
+        "STATUS_FIX": {
+            "type": "int8",
+            "comment": "",
+            "constant": "      0        # unaugmented fix"
+        },
+        "STATUS_SBAS_FIX": {
+            "type": "int8",
+            "comment": "",
+            "constant": " 1        # with satellite-based augmentation"
+        },
+        "STATUS_GBAS_FIX": {
+            "type": "int8",
+            "comment": "",
+            "constant": " 2        # with ground-based augmentation"
+        },
+        "status": {
+            "type": "int8",
+            "comment": "",
+            "constant": ""
+        },
+        "SERVICE_GPS": {
+            "type": "uint16",
+            "comment": "",
+            "constant": "     1"
+        },
+        "SERVICE_GLONASS": {
+            "type": "uint16",
+            "comment": "",
+            "constant": " 2"
+        },
+        "SERVICE_COMPASS": {
+            "type": "uint16",
+            "comment": "",
+            "constant": " 4      # includes BeiDou."
+        },
+        "SERVICE_GALILEO": {
+            "type": "uint16",
+            "comment": "",
+            "constant": " 8"
+        },
+        "service": {
+            "type": "uint16",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/PointCloud.msg",
+        "#": [
+            " This message holds a collection of 3d points, plus optional additional",
+            " information about each point.",
+            " Time of sensor data acquisition, coordinate frame ID.",
+            " Array of 3d points. Each Point32 should be interpreted as a 3d point",
+            " in the frame given in the header.",
+            " Each channel should have the same number of elements as points array,",
+            " and the data in each channel should correspond 1:1 with each point.",
+            " Channel names in common practice are listed in ChannelFloat32.msg."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "points": {
+            "type": "geometry_msgs/Point32[]",
+            "comment": "",
+            "constant": ""
+        },
+        "channels": {
+            "type": "ChannelFloat32[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/PointCloud2.msg",
+        "#": [
+            " This message holds a collection of N-dimensional points, which may",
+            " contain additional information such as normals, intensity, etc. The",
+            " point data is stored as a binary blob, its layout described by the",
+            " contents of the \"fields\" array.",
+            " The point cloud data may be organized 2d (image-like) or 1d",
+            " (unordered). Point clouds organized as 2d images may be produced by",
+            " camera depth sensors such as stereo or time-of-flight.",
+            " Time of sensor data acquisition, and the coordinate frame ID (for 3d",
+            " points).",
+            " 2D structure of the point cloud. If the cloud is unordered, height is",
+            " 1 and width is the length of the point cloud.",
+            " Describes the channels and their layout in the binary data blob."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "height": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "width": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "fields": {
+            "type": "PointField[]",
+            "comment": "",
+            "constant": ""
+        },
+        "is_bigendian": {
+            "type": "bool",
+            "comment": " Is this data bigendian?",
+            "constant": ""
+        },
+        "point_step": {
+            "type": "uint32",
+            "comment": " Length of a point in bytes",
+            "constant": ""
+        },
+        "row_step": {
+            "type": "uint32",
+            "comment": " Length of a row in bytes",
+            "constant": ""
+        },
+        "data": {
+            "type": "uint8[]",
+            "comment": " Actual point data, size is (row_step*height)",
+            "constant": ""
+        },
+        "is_dense": {
+            "type": "bool",
+            "comment": " True if there are no invalid points",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/PointField.msg",
+        "#": [
+            " This message holds the description of one point entry in the",
+            " PointCloud2 message format."
+        ],
+        "INT8": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "UINT8": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "INT16": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 3"
+        },
+        "UINT16": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 4"
+        },
+        "INT32": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 5"
+        },
+        "UINT32": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 6"
+        },
+        "FLOAT32": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 7"
+        },
+        "FLOAT64": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 8"
+        },
+        "name": {
+            "type": "string",
+            "comment": " Name of field",
+            "constant": ""
+        },
+        "offset": {
+            "type": "uint32",
+            "comment": " Offset from start of point struct",
+            "constant": ""
+        },
+        "datatype": {
+            "type": "uint8",
+            "comment": " Datatype enumeration, see above",
+            "constant": ""
+        },
+        "count": {
+            "type": "uint32",
+            "comment": " How many elements in the field",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Range.msg",
+        "#": [
+            " Single range reading from an active ranger that emits energy and reports",
+            " one range reading that is valid along an arc at the distance measured. ",
+            " This message is  not appropriate for laser scanners. See the LaserScan",
+            " message if you are working with a laser scanner.",
+            " This message also can represent a fixed-distance (binary) ranger.  This",
+            " sensor will have min_range===max_range===distance of detection.",
+            " These sensors follow REP 117 and will output -Inf if the object is detected",
+            " and +Inf if the object is outside of the detection range.",
+            " Radiation type enums",
+            " If you want a value added to this list, send an email to the ros-users list"
+        ],
+        "header": {
+            "type": "Header",
+            "comment": " timestamp in the header is the time the ranger",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " (Object out of range)",
+            "constant": ""
+        },
+        "ULTRASOUND": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "INFRARED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "radiation_type": {
+            "type": "uint8",
+            "comment": " the type of radiation used by the sensor",
+            "constant": ""
+        },
+        "field_of_view": {
+            "type": "float32",
+            "comment": " the size of the arc that the distance reading is",
+            "constant": ""
+        },
+        "min_range": {
+            "type": "float32",
+            "comment": " minimum range value [m]",
+            "constant": ""
+        },
+        "max_range": {
+            "type": "float32",
+            "comment": " maximum range value [m]",
+            "constant": ""
+        },
+        "range": {
+            "type": "float32",
+            "comment": " range data [m]",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/RegionOfInterest.msg",
+        "#": [
+            " This message is used to specify a region of interest within an image.",
+            "",
+            " When used to specify the ROI setting of the camera when the image was",
+            " taken, the height and width fields should either match the height and",
+            " width fields for the associated image; or height = width = 0",
+            " indicates that the full resolution image was captured.",
+            " True if a distinct rectified ROI should be calculated from the \"raw\"",
+            " ROI in this message. Typically this should be False if the full image",
+            " is captured (ROI not used), and True if a subwindow is captured (ROI",
+            " used)."
+        ],
+        "x_offset": {
+            "type": "uint32",
+            "comment": " Leftmost pixel of the ROI",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " (0 if the ROI includes the top edge of the image)",
+            "constant": ""
+        },
+        "y_offset": {
+            "type": "uint32",
+            "comment": " Topmost pixel of the ROI",
+            "constant": ""
+        },
+        "height": {
+            "type": "uint32",
+            "comment": " Height of ROI",
+            "constant": ""
+        },
+        "width": {
+            "type": "uint32",
+            "comment": " Width of ROI",
+            "constant": ""
+        },
+        "do_rectify": {
+            "type": "bool",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/RelativeHumidity.msg",
+        "": {
+            "type": "#",
+            "comment": " 1.0 represents partial pressure of saturation",
+            "constant": ""
+        },
+        "r header": {
+            "type": "Header",
+            "comment": " timestamp of the measurement",
+            "constant": ""
+        },
+        "4 relative_humidity": {
+            "type": "float64",
+            "comment": " Expression of the relative humidity",
+            "constant": ""
+        },
+        "4 variance": {
+            "type": "float64",
+            "comment": " 0 is interpreted as variance unknown",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/Temperature.msg",
+        "": {
+            "type": "#",
+            "comment": " frame_id is the location of the temperature reading",
+            "constant": ""
+        },
+        "r header": {
+            "type": "Header",
+            "comment": " timestamp is the time the temperature was measured",
+            "constant": ""
+        },
+        "4 temperature": {
+            "type": "float64",
+            "comment": " Measurement of the Temperature in Degrees Celsius",
+            "constant": ""
+        },
+        "4 variance": {
+            "type": "float64",
+            "comment": " 0 is interpreted as variance unknown",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/sensor_msgs/msg/TimeReference.msg",
+        "#": " Measurement from an external time source not actively synchronized with the system clock.",
+        "header": {
+            "type": "Header",
+            "comment": " stamp is system time for which measurement was valid",
+            "constant": ""
+        },
+        "": {
+            "type": "#",
+            "comment": " frame_id is not used ",
+            "constant": ""
+        },
+        "time_ref": {
+            "type": "time",
+            "comment": " corresponding time from this external source",
+            "constant": ""
+        },
+        "source": {
+            "type": "string",
+            "comment": " (optional) name of time source",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/shape_msgs/msg/Mesh.msg",
+        "#": [
+            " Definition of a mesh",
+            " list of triangles; the index values refer to positions in vertices[]",
+            " the actual vertices that make up the mesh"
+        ],
+        "triangles": {
+            "type": "MeshTriangle[]",
+            "comment": "",
+            "constant": ""
+        },
+        "vertices": {
+            "type": "geometry_msgs/Point[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/shape_msgs/msg/MeshTriangle.msg",
+        "#": " Definition of a triangle's vertices",
+        "vertex_indices": {
+            "type": "uint32[3]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/shape_msgs/msg/Plane.msg",
+        "#": [
+            " Representation of a plane, using the plane equation ax + by + cz + d = 0",
+            " a := coef[0]",
+            " b := coef[1]",
+            " c := coef[2]",
+            " d := coef[3]"
+        ],
+        "coef": {
+            "type": "float64[4]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/shape_msgs/msg/SolidPrimitive.msg",
+        "#": [
+            " Define box, sphere, cylinder, cone ",
+            " All shapes are defined to have their bounding boxes centered around 0,0,0.",
+            " The type of the shape",
+            " The dimensions of the shape",
+            " The meaning of the shape dimensions: each constant defines the index in the 'dimensions' array",
+            " For the BOX type, the X, Y, and Z dimensions are the length of the corresponding",
+            " sides of the box.",
+            " For the SPHERE type, only one component is used, and it gives the radius of",
+            " the sphere.",
+            " For the CYLINDER and CONE types, the center line is oriented along",
+            " the Z axis.  Therefore the CYLINDER_HEIGHT (CONE_HEIGHT) component",
+            " of dimensions gives the height of the cylinder (cone).  The",
+            " CYLINDER_RADIUS (CONE_RADIUS) component of dimensions gives the",
+            " radius of the base of the cylinder (cone).  Cone and cylinder",
+            " primitives are defined to be circular. The tip of the cone is",
+            " pointing up, along +Z axis."
+        ],
+        "BOX": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "SPHERE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "CYLINDER": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "3"
+        },
+        "CONE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "4"
+        },
+        "type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "dimensions": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "BOX_X": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "BOX_Y": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "BOX_Z": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "SPHERE_RADIUS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "CYLINDER_HEIGHT": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "CYLINDER_RADIUS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "CONE_HEIGHT": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "CONE_RADIUS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        }
+    },
+    {
+        "$file": "common_msgs/stereo_msgs/msg/DisparityImage.msg",
+        "#": [
+            " Separate header for compatibility with current TimeSynchronizer.",
+            " Likely to be removed in a later release, use image.header instead.",
+            " Floating point disparity image. The disparities are pre-adjusted for any",
+            " x-offset between the principal points of the two cameras (in the case",
+            " that they are verged). That is: d = x_l - x_r - (cx_l - cx_r)",
+            " Stereo geometry. For disparity d, the depth from the camera is Z = fT/d.",
+            " Subwindow of (potentially) valid disparity values.",
+            " The range of disparities searched.",
+            " In the disparity image, any disparity less than min_disparity is invalid.",
+            " The disparity search range defines the horopter, or 3D volume that the",
+            " stereo algorithm can \"see\". Points with Z outside of:",
+            "     Z_min = fT / max_disparity",
+            "     Z_max = fT / min_disparity",
+            " could not be found.",
+            " Smallest allowed disparity increment. The smallest achievable depth range",
+            " resolution is delta_Z = (Z^2/fT)*delta_d."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "image": {
+            "type": "sensor_msgs/Image",
+            "comment": "",
+            "constant": ""
+        },
+        "f": {
+            "type": "float32",
+            "comment": " Focal length, pixels",
+            "constant": ""
+        },
+        "T": {
+            "type": "float32",
+            "comment": " Baseline, world units",
+            "constant": ""
+        },
+        "valid_window": {
+            "type": "sensor_msgs/RegionOfInterest",
+            "comment": "",
+            "constant": ""
+        },
+        "min_disparity": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "max_disparity": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "delta_d": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/trajectory_msgs/msg/JointTrajectory.msg",
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "joint_names": {
+            "type": "string[]",
+            "comment": "",
+            "constant": ""
+        },
+        "points": {
+            "type": "JointTrajectoryPoint[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/trajectory_msgs/msg/JointTrajectoryPoint.msg",
+        "#": [
+            " Each trajectory point specifies either positions[, velocities[, accelerations]]",
+            " or positions[, effort] for the trajectory to be executed.",
+            " All specified values are in the same order as the joint names in JointTrajectory.msg"
+        ],
+        "positions": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "velocities": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "accelerations": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "effort": {
+            "type": "float64[]",
+            "comment": "",
+            "constant": ""
+        },
+        "time_from_start": {
+            "type": "duration",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/trajectory_msgs/msg/MultiDOFJointTrajectory.msg",
+        "#": [
+            " The header is used to specify the coordinate frame and the reference time for the trajectory durations",
+            " A representation of a multi-dof joint trajectory (each point is a transformation)",
+            " Each point along the trajectory will include an array of positions/velocities/accelerations",
+            " that has the same length as the array of joint names, and has the same order of joints as ",
+            " the joint names array."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "joint_names": {
+            "type": "string[]",
+            "comment": "",
+            "constant": ""
+        },
+        "points": {
+            "type": "MultiDOFJointTrajectoryPoint[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/trajectory_msgs/msg/MultiDOFJointTrajectoryPoint.msg",
+        "#": [
+            " Each multi-dof joint can specify a transform (up to 6 DOF)",
+            " There can be a velocity specified for the origin of the joint ",
+            " There can be an acceleration specified for the origin of the joint "
+        ],
+        "transforms": {
+            "type": "geometry_msgs/Transform[]",
+            "comment": "",
+            "constant": ""
+        },
+        "velocities": {
+            "type": "geometry_msgs/Twist[]",
+            "comment": "",
+            "constant": ""
+        },
+        "accelerations": {
+            "type": "geometry_msgs/Twist[]",
+            "comment": "",
+            "constant": ""
+        },
+        "time_from_start": {
+            "type": "duration",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/ImageMarker.msg",
+        "CIRCLE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "LINE_STRIP": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "LINE_LIST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "POLYGON": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "3"
+        },
+        "POINTS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "4"
+        },
+        "ADD": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "REMOVE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "ns": {
+            "type": "string",
+            "comment": " namespace, used with id to form a unique id",
+            "constant": ""
+        },
+        "id": {
+            "type": "int32",
+            "comment": " unique id within the namespace",
+            "constant": ""
+        },
+        "type": {
+            "type": "int32",
+            "comment": " CIRCLE/LINE_STRIP/etc.",
+            "constant": ""
+        },
+        "action": {
+            "type": "int32",
+            "comment": " ADD/REMOVE",
+            "constant": ""
+        },
+        "position": {
+            "type": "geometry_msgs/Point",
+            "comment": " 2D, in pixel-coords",
+            "constant": ""
+        },
+        "scale": {
+            "type": "float32",
+            "comment": " the diameter for a circle, etc.",
+            "constant": ""
+        },
+        "outline_color": {
+            "type": "std_msgs/ColorRGBA",
+            "comment": "",
+            "constant": ""
+        },
+        "filled": {
+            "type": "uint8",
+            "comment": " whether to fill in the shape with color",
+            "constant": ""
+        },
+        "fill_color": {
+            "type": "std_msgs/ColorRGBA",
+            "comment": " color [0.0-1.0]",
+            "constant": ""
+        },
+        "lifetime": {
+            "type": "duration",
+            "comment": " How long the object should last before being automatically deleted.  0 means forever",
+            "constant": ""
+        },
+        "points": {
+            "type": "geometry_msgs/Point[]",
+            "comment": " used for LINE_STRIP/LINE_LIST/POINTS/etc., 2D in pixel coords",
+            "constant": ""
+        },
+        "outline_colors": {
+            "type": "std_msgs/ColorRGBA[]",
+            "comment": " a color for each line, point, etc.",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarker.msg",
+        "#": [
+            " Time/frame info.",
+            " If header.time is set to 0, the marker will be retransformed into",
+            " its frame on each timestep. You will receive the pose feedback",
+            " in the same frame.",
+            " Otherwise, you might receive feedback in a different frame.",
+            " For rviz, this will be the current 'fixed frame' set by the user.",
+            " Initial pose. Also, defines the pivot point for rotations.",
+            " Identifying string. Must be globally unique in",
+            " the topic that this message is sent through.",
+            " Short description (< 40 characters).",
+            " Scale to be used for default controls (default=1).",
+            " All menu and submenu entries associated with this marker.",
+            " List of controls displayed for this marker."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "geometry_msgs/Pose",
+            "comment": "",
+            "constant": ""
+        },
+        "name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "description": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "scale": {
+            "type": "float32",
+            "comment": "",
+            "constant": ""
+        },
+        "menu_entries": {
+            "type": "MenuEntry[]",
+            "comment": "",
+            "constant": ""
+        },
+        "controls": {
+            "type": "InteractiveMarkerControl[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerControl.msg",
+        "#": [
+            " Represents a control that is to be displayed together with an interactive marker",
+            " Identifying string for this control.",
+            " You need to assign a unique value to this to receive feedback from the GUI",
+            " on what actions the user performs on this control (e.g. a button click).",
+            " Defines the local coordinate frame (relative to the pose of the parent",
+            " interactive marker) in which is being rotated and translated.",
+            " Default: Identity",
+            " Orientation mode: controls how orientation changes.",
+            " INHERIT: Follow orientation of interactive marker",
+            " FIXED: Keep orientation fixed at initial state",
+            " VIEW_FACING: Align y-z plane with screen (x: forward, y:left, z:up).",
+            " Interaction mode for this control",
+            " ",
+            " NONE: This control is only meant for visualization; no context menu.",
+            " MENU: Like NONE, but right-click menu is active.",
+            " BUTTON: Element can be left-clicked.",
+            " MOVE_AXIS: Translate along local x-axis.",
+            " MOVE_PLANE: Translate in local y-z plane.",
+            " ROTATE_AXIS: Rotate around local x-axis.",
+            " MOVE_ROTATE: Combines MOVE_PLANE and ROTATE_AXIS.",
+            " \"3D\" interaction modes work with the mouse+SHIFT+CTRL or with 3D cursors.",
+            " MOVE_3D: Translate freely in 3D space.",
+            " ROTATE_3D: Rotate freely in 3D space about the origin of parent frame.",
+            " MOVE_ROTATE_3D: Full 6-DOF freedom of translation and rotation about the cursor origin.",
+            " If true, the contained markers will also be visible",
+            " when the gui is not in interactive mode.",
+            " Markers to be displayed as custom visual representation.",
+            " Leave this empty to use the default control handles.",
+            "",
+            " Note: ",
+            " - The markers can be defined in an arbitrary coordinate frame,",
+            "   but will be transformed into the local frame of the interactive marker.",
+            " - If the header of a marker is empty, its pose will be interpreted as ",
+            "   relative to the pose of the parent interactive marker.",
+            " In VIEW_FACING mode, set this to true if you don't want the markers",
+            " to be aligned with the camera view point. The markers will show up",
+            " as in INHERIT mode.",
+            " Short description (< 40 characters) of what this control does,",
+            " e.g. \"Move the robot\". ",
+            " Default: A generic description based on the interaction mode"
+        ],
+        "name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "orientation": {
+            "type": "geometry_msgs/Quaternion",
+            "comment": "",
+            "constant": ""
+        },
+        "INHERIT": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0 "
+        },
+        "FIXED": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "VIEW_FACING": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "orientation_mode": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "NONE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0 "
+        },
+        "MENU": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "BUTTON": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "MOVE_AXIS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 3 "
+        },
+        "MOVE_PLANE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 4"
+        },
+        "ROTATE_AXIS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 5"
+        },
+        "MOVE_ROTATE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 6"
+        },
+        "MOVE_3D": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 7"
+        },
+        "ROTATE_3D": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 8"
+        },
+        "MOVE_ROTATE_3D": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 9"
+        },
+        "interaction_mode": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "always_visible": {
+            "type": "bool",
+            "comment": "",
+            "constant": ""
+        },
+        "markers": {
+            "type": "Marker[]",
+            "comment": "",
+            "constant": ""
+        },
+        "independent_marker_orientation": {
+            "type": "bool",
+            "comment": "",
+            "constant": ""
+        },
+        "description": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerFeedback.msg",
+        "#": [
+            " Time/frame info.",
+            " Identifying string. Must be unique in the topic namespace.",
+            " Feedback message sent back from the GUI, e.g.",
+            " when the status of an interactive marker was modified by the user.",
+            " Specifies which interactive marker and control this message refers to",
+            " Type of the event",
+            " KEEP_ALIVE: sent while dragging to keep up control of the marker",
+            " MENU_SELECT: a menu entry has been selected",
+            " BUTTON_CLICK: a button control has been clicked",
+            " POSE_UPDATE: the pose has been changed using one of the controls",
+            " Current pose of the marker",
+            " Note: Has to be valid for all feedback types.",
+            " Contains the ID of the selected menu entry",
+            " Only valid for MENU_SELECT events.",
+            " If event_type is BUTTON_CLICK, MOUSE_DOWN, or MOUSE_UP, mouse_point",
+            " may contain the 3 dimensional position of the event on the",
+            " control.  If it does, mouse_point_valid will be true.  mouse_point",
+            " will be relative to the frame listed in the header."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "client_id": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "marker_name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "control_name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "KEEP_ALIVE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0"
+        },
+        "POSE_UPDATE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "MENU_SELECT": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 2"
+        },
+        "BUTTON_CLICK": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 3"
+        },
+        "MOUSE_DOWN": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 4"
+        },
+        "MOUSE_UP": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 5"
+        },
+        "event_type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "geometry_msgs/Pose",
+            "comment": "",
+            "constant": ""
+        },
+        "menu_entry_id": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "mouse_point": {
+            "type": "geometry_msgs/Point",
+            "comment": "",
+            "constant": ""
+        },
+        "mouse_point_valid": {
+            "type": "bool",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerInit.msg",
+        "#": [
+            " Identifying string. Must be unique in the topic namespace",
+            " that this server works on.",
+            " Sequence number.",
+            " The client will use this to detect if it has missed a subsequent",
+            " update.  Every update message will have the same sequence number as",
+            " an init message.  Clients will likely want to unsubscribe from the",
+            " init topic after a successful initialization to avoid receiving",
+            " duplicate data.",
+            " All markers."
+        ],
+        "server_id": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "seq_num": {
+            "type": "uint64",
+            "comment": "",
+            "constant": ""
+        },
+        "markers": {
+            "type": "InteractiveMarker[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerPose.msg",
+        "#": [
+            " Time/frame info.",
+            " Initial pose. Also, defines the pivot point for rotations.",
+            " Identifying string. Must be globally unique in",
+            " the topic that this message is sent through."
+        ],
+        "header": {
+            "type": "Header",
+            "comment": "",
+            "constant": ""
+        },
+        "pose": {
+            "type": "geometry_msgs/Pose",
+            "comment": "",
+            "constant": ""
+        },
+        "name": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerUpdate.msg",
+        "#": [
+            " Identifying string. Must be unique in the topic namespace",
+            " that this server works on.",
+            " Sequence number.",
+            " The client will use this to detect if it has missed an update.",
+            " Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.",
+            " UPDATE: Incremental update to previous state. ",
+            "         The sequence number must be 1 higher than for",
+            "         the previous update.",
+            " KEEP_ALIVE: Indicates the that the server is still living.",
+            "             The sequence number does not increase.",
+            "             No payload data should be filled out (markers, poses, or erases).",
+            "Note: No guarantees on the order of processing.",
+            "      Contents must be kept consistent by sender.",
+            "Markers to be added or updated",
+            "Poses of markers that should be moved",
+            "Names of markers to be erased"
+        ],
+        "server_id": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "seq_num": {
+            "type": "uint64",
+            "comment": "",
+            "constant": ""
+        },
+        "KEEP_ALIVE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 0"
+        },
+        "UPDATE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": " 1"
+        },
+        "type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        },
+        "markers": {
+            "type": "InteractiveMarker[]",
+            "comment": "",
+            "constant": ""
+        },
+        "poses": {
+            "type": "InteractiveMarkerPose[]",
+            "comment": "",
+            "constant": ""
+        },
+        "erases": {
+            "type": "string[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/Marker.msg",
+        "#": [
+            " See http://www.ros.org/wiki/rviz/DisplayTypes/Marker and http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes for more information on using this message with rviz",
+            "uint8 DELETEALL=3 # TODO: enable for ROS-J, disabled for now but functionality is still there. Allows one to clear all markers in plugin",
+            "Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, ...)",
+            "Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, ...)",
+            "number of colors must either be 0 or equal to the number of points",
+            "NOTE: alpha is not yet used",
+            " NOTE: only used for text markers",
+            " NOTE: only used for MESH_RESOURCE markers"
+        ],
+        "ARROW": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "CUBE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "SPHERE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "CYLINDER": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "3"
+        },
+        "LINE_STRIP": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "4"
+        },
+        "LINE_LIST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "5"
+        },
+        "CUBE_LIST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "6"
+        },
+        "SPHERE_LIST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "7"
+        },
+        "POINTS": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "8"
+        },
+        "TEXT_VIEW_FACING": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "9"
+        },
+        "MESH_RESOURCE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "10"
+        },
+        "TRIANGLE_LIST": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "11"
+        },
+        "ADD": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "MODIFY": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "DELETE": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "header": {
+            "type": "Header",
+            "comment": " header for time/frame information",
+            "constant": ""
+        },
+        "ns": {
+            "type": "string",
+            "comment": " Namespace to place this object in... used in conjunction with id to create a unique name for the object",
+            "constant": ""
+        },
+        "id": {
+            "type": "int32",
+            "comment": " object ID useful in conjunction with the namespace for manipulating and deleting the object later",
+            "constant": ""
+        },
+        "type": {
+            "type": "int32",
+            "comment": " Type of object",
+            "constant": ""
+        },
+        "action": {
+            "type": "int32",
+            "comment": " 0 add/modify an object, 1 (deprecated), 2 deletes an object, 3 deletes all objects",
+            "constant": ""
+        },
+        "pose": {
+            "type": "geometry_msgs/Pose",
+            "comment": " Pose of the object",
+            "constant": ""
+        },
+        "scale": {
+            "type": "geometry_msgs/Vector3",
+            "comment": " Scale of the object 1,1,1 means default (usually 1 meter square)",
+            "constant": ""
+        },
+        "color": {
+            "type": "std_msgs/ColorRGBA",
+            "comment": " Color [0.0-1.0]",
+            "constant": ""
+        },
+        "lifetime": {
+            "type": "duration",
+            "comment": " How long the object should last before being automatically deleted.  0 means forever",
+            "constant": ""
+        },
+        "frame_locked": {
+            "type": "bool",
+            "comment": " If this marker should be frame-locked, i.e. retransformed into its frame every timestep",
+            "constant": ""
+        },
+        "points": {
+            "type": "geometry_msgs/Point[]",
+            "comment": "",
+            "constant": ""
+        },
+        "colors": {
+            "type": "std_msgs/ColorRGBA[]",
+            "comment": "",
+            "constant": ""
+        },
+        "text": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "mesh_resource": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "mesh_use_embedded_materials": {
+            "type": "bool",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/MarkerArray.msg",
+        "markers": {
+            "type": "Marker[]",
+            "comment": "",
+            "constant": ""
+        }
+    },
+    {
+        "$file": "common_msgs/visualization_msgs/msg/MenuEntry.msg",
+        "#": [
+            " MenuEntry message.",
+            " Each InteractiveMarker message has an array of MenuEntry messages.",
+            " A collection of MenuEntries together describe a",
+            " menu/submenu/subsubmenu/etc tree, though they are stored in a flat",
+            " array.  The tree structure is represented by giving each menu entry",
+            " an ID number and a \"parent_id\" field.  Top-level entries are the",
+            " ones with parent_id = 0.  Menu entries are ordered within their",
+            " level the same way they are ordered in the containing array.  Parent",
+            " entries must appear before their children.",
+            " Example:",
+            " - id = 3",
+            "   parent_id = 0",
+            "   title = \"fun\"",
+            " - id = 2",
+            "   parent_id = 0",
+            "   title = \"robot\"",
+            " - id = 4",
+            "   parent_id = 2",
+            "   title = \"pr2\"",
+            " - id = 5",
+            "   parent_id = 2",
+            "   title = \"turtle\"",
+            "",
+            " Gives a menu tree like this:",
+            "  - fun",
+            "  - robot",
+            "    - pr2",
+            "    - turtle",
+            " ID is a number for each menu entry.  Must be unique within the",
+            " control, and should never be 0.",
+            " ID of the parent of this menu entry, if it is a submenu.  If this",
+            " menu entry is a top-level entry, set parent_id to 0.",
+            " menu / entry title",
+            " Arguments to command indicated by command_type (below)",
+            " Command_type stores the type of response desired when this menu",
+            " entry is clicked.",
+            " FEEDBACK: send an InteractiveMarkerFeedback message with menu_entry_id set to this entry's id.",
+            " ROSRUN: execute \"rosrun\" with arguments given in the command field (above).",
+            " ROSLAUNCH: execute \"roslaunch\" with arguments given in the command field (above)."
+        ],
+        "id": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "parent_id": {
+            "type": "uint32",
+            "comment": "",
+            "constant": ""
+        },
+        "title": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "command": {
+            "type": "string",
+            "comment": "",
+            "constant": ""
+        },
+        "FEEDBACK": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "0"
+        },
+        "ROSRUN": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "1"
+        },
+        "ROSLAUNCH": {
+            "type": "uint8",
+            "comment": "",
+            "constant": "2"
+        },
+        "command_type": {
+            "type": "uint8",
+            "comment": "",
+            "constant": ""
+        }
+    }
+]

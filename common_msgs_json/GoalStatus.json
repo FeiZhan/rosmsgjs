@@ -1,0 +1,74 @@
+{
+    "$file": "common_msgs/actionlib_msgs/msg/GoalStatus.msg",
+    "goal_id": {
+        "type": "GoalID",
+        "comment": "",
+        "constant": ""
+    },
+    "status": {
+        "type": "uint8",
+        "comment": "",
+        "constant": ""
+    },
+    "PENDING": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 0   # The goal has yet to be processed by the action server"
+    },
+    "ACTIVE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 1   # The goal is currently being processed by the action server"
+    },
+    "PREEMPTED": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 2   # The goal received a cancel request after it started executing"
+    },
+    "": {
+        "type": "#",
+        "comment": "    sent over the wire by an action server",
+        "constant": ""
+    },
+    "SUCCEEDED": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 3   # The goal was achieved successfully by the action server (Terminal State)"
+    },
+    "ABORTED": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 4   # The goal was aborted during execution by the action server due"
+    },
+    "REJECTED": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 5   # The goal was rejected by the action server without being processed,"
+    },
+    "PREEMPTING": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 6   # The goal received a cancel request after it started executing"
+    },
+    "RECALLING": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 7   # The goal received a cancel request before it started executing,"
+    },
+    "RECALLED": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 8   # The goal received a cancel request before it started executing"
+    },
+    "LOST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 9   # An action client can determine that a goal is LOST. This should not be"
+    },
+    "#": "Allow for the user to associate a string with GoalStatus for debugging",
+    "text": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    }
+}

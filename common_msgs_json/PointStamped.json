@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/PointStamped.msg",
+    "#": " This represents a Point with reference coordinate frame and timestamp",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "point": {
+        "type": "Point",
+        "comment": "",
+        "constant": ""
+    }
+}

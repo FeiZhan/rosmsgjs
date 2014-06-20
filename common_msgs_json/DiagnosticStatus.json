@@ -1,0 +1,53 @@
+{
+    "$file": "common_msgs/diagnostic_msgs/msg/DiagnosticStatus.msg",
+    "#": [
+        " This message holds the status of an individual component of the robot.",
+        " ",
+        " Possible levels of operations"
+    ],
+    "OK": {
+        "type": "byte",
+        "comment": "",
+        "constant": "0"
+    },
+    "WARN": {
+        "type": "byte",
+        "comment": "",
+        "constant": "1"
+    },
+    "ERROR": {
+        "type": "byte",
+        "comment": "",
+        "constant": "2"
+    },
+    "STALE": {
+        "type": "byte",
+        "comment": "",
+        "constant": "3"
+    },
+    "level": {
+        "type": "byte",
+        "comment": " level of operation enumerated above ",
+        "constant": ""
+    },
+    "name": {
+        "type": "string",
+        "comment": " a description of the test/component reporting",
+        "constant": ""
+    },
+    "message": {
+        "type": "string",
+        "comment": " a description of the status",
+        "constant": ""
+    },
+    "hardware_id": {
+        "type": "string",
+        "comment": " a hardware unique string",
+        "constant": ""
+    },
+    "values": {
+        "type": "KeyValue[]",
+        "comment": " an array of values associated with the status",
+        "constant": ""
+    }
+}

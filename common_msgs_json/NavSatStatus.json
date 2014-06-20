@@ -1,0 +1,61 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/NavSatStatus.msg",
+    "#": [
+        " Navigation Satellite fix status for any Global Navigation Satellite System",
+        " Whether to output an augmented fix is determined by both the fix",
+        " type and the last time differential corrections were received.  A",
+        " fix is valid when status >= STATUS_FIX.",
+        " Bits defining which Global Navigation Satellite System signals were",
+        " used by the receiver."
+    ],
+    "STATUS_NO_FIX": {
+        "type": "int8",
+        "comment": "",
+        "constant": "  -1        # unable to fix position"
+    },
+    "STATUS_FIX": {
+        "type": "int8",
+        "comment": "",
+        "constant": "      0        # unaugmented fix"
+    },
+    "STATUS_SBAS_FIX": {
+        "type": "int8",
+        "comment": "",
+        "constant": " 1        # with satellite-based augmentation"
+    },
+    "STATUS_GBAS_FIX": {
+        "type": "int8",
+        "comment": "",
+        "constant": " 2        # with ground-based augmentation"
+    },
+    "status": {
+        "type": "int8",
+        "comment": "",
+        "constant": ""
+    },
+    "SERVICE_GPS": {
+        "type": "uint16",
+        "comment": "",
+        "constant": "     1"
+    },
+    "SERVICE_GLONASS": {
+        "type": "uint16",
+        "comment": "",
+        "constant": " 2"
+    },
+    "SERVICE_COMPASS": {
+        "type": "uint16",
+        "comment": "",
+        "constant": " 4      # includes BeiDou."
+    },
+    "SERVICE_GALILEO": {
+        "type": "uint16",
+        "comment": "",
+        "constant": " 8"
+    },
+    "service": {
+        "type": "uint16",
+        "comment": "",
+        "constant": ""
+    }
+}

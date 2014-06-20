@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Twist.msg",
+    "#": " This expresses velocity in free space broken into its linear and angular parts.",
+    "linear": {
+        "type": "Vector3",
+        "comment": "",
+        "constant": ""
+    },
+    "angular": {
+        "type": "Vector3",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/TimeReference.msg",
+    "#": " Measurement from an external time source not actively synchronized with the system clock.",
+    "header": {
+        "type": "Header",
+        "comment": " stamp is system time for which measurement was valid",
+        "constant": ""
+    },
+    "": {
+        "type": "#",
+        "comment": " frame_id is not used ",
+        "constant": ""
+    },
+    "time_ref": {
+        "type": "time",
+        "comment": " corresponding time from this external source",
+        "constant": ""
+    },
+    "source": {
+        "type": "string",
+        "comment": " (optional) name of time source",
+        "constant": ""
+    }
+}

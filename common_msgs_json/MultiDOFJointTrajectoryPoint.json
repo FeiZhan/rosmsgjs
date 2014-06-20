@@ -1,0 +1,28 @@
+{
+    "$file": "common_msgs/trajectory_msgs/msg/MultiDOFJointTrajectoryPoint.msg",
+    "#": [
+        " Each multi-dof joint can specify a transform (up to 6 DOF)",
+        " There can be a velocity specified for the origin of the joint ",
+        " There can be an acceleration specified for the origin of the joint "
+    ],
+    "transforms": {
+        "type": "geometry_msgs/Transform[]",
+        "comment": "",
+        "constant": ""
+    },
+    "velocities": {
+        "type": "geometry_msgs/Twist[]",
+        "comment": "",
+        "constant": ""
+    },
+    "accelerations": {
+        "type": "geometry_msgs/Twist[]",
+        "comment": "",
+        "constant": ""
+    },
+    "time_from_start": {
+        "type": "duration",
+        "comment": "",
+        "constant": ""
+    }
+}

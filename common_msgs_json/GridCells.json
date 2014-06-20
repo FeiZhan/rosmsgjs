@@ -1,0 +1,24 @@
+{
+    "$file": "common_msgs/nav_msgs/msg/GridCells.msg",
+    "#": "an array of cells in a 2D grid",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "cell_width": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "cell_height": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "cells": {
+        "type": "geometry_msgs/Point[]",
+        "comment": "",
+        "constant": ""
+    }
+}

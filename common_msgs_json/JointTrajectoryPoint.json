@@ -1,0 +1,33 @@
+{
+    "$file": "common_msgs/trajectory_msgs/msg/JointTrajectoryPoint.msg",
+    "#": [
+        " Each trajectory point specifies either positions[, velocities[, accelerations]]",
+        " or positions[, effort] for the trajectory to be executed.",
+        " All specified values are in the same order as the joint names in JointTrajectory.msg"
+    ],
+    "positions": {
+        "type": "float64[]",
+        "comment": "",
+        "constant": ""
+    },
+    "velocities": {
+        "type": "float64[]",
+        "comment": "",
+        "constant": ""
+    },
+    "accelerations": {
+        "type": "float64[]",
+        "comment": "",
+        "constant": ""
+    },
+    "effort": {
+        "type": "float64[]",
+        "comment": "",
+        "constant": ""
+    },
+    "time_from_start": {
+        "type": "duration",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerFeedback.msg",
+    "#": [
+        " Time/frame info.",
+        " Identifying string. Must be unique in the topic namespace.",
+        " Feedback message sent back from the GUI, e.g.",
+        " when the status of an interactive marker was modified by the user.",
+        " Specifies which interactive marker and control this message refers to",
+        " Type of the event",
+        " KEEP_ALIVE: sent while dragging to keep up control of the marker",
+        " MENU_SELECT: a menu entry has been selected",
+        " BUTTON_CLICK: a button control has been clicked",
+        " POSE_UPDATE: the pose has been changed using one of the controls",
+        " Current pose of the marker",
+        " Note: Has to be valid for all feedback types.",
+        " Contains the ID of the selected menu entry",
+        " Only valid for MENU_SELECT events.",
+        " If event_type is BUTTON_CLICK, MOUSE_DOWN, or MOUSE_UP, mouse_point",
+        " may contain the 3 dimensional position of the event on the",
+        " control.  If it does, mouse_point_valid will be true.  mouse_point",
+        " will be relative to the frame listed in the header."
+    ],
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "client_id": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "marker_name": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "control_name": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "KEEP_ALIVE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 0"
+    },
+    "POSE_UPDATE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 1"
+    },
+    "MENU_SELECT": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 2"
+    },
+    "BUTTON_CLICK": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 3"
+    },
+    "MOUSE_DOWN": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 4"
+    },
+    "MOUSE_UP": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 5"
+    },
+    "event_type": {
+        "type": "uint8",
+        "comment": "",
+        "constant": ""
+    },
+    "pose": {
+        "type": "geometry_msgs/Pose",
+        "comment": "",
+        "constant": ""
+    },
+    "menu_entry_id": {
+        "type": "uint32",
+        "comment": "",
+        "constant": ""
+    },
+    "mouse_point": {
+        "type": "geometry_msgs/Point",
+        "comment": "",
+        "constant": ""
+    },
+    "mouse_point_valid": {
+        "type": "bool",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/Illuminance.msg",
+    "": {
+        "type": "#",
+        "comment": " frame_id is the location and direction of the reading",
+        "constant": ""
+    },
+    "r header": {
+        "type": "Header",
+        "comment": " timestamp is the time the illuminance was measured",
+        "constant": ""
+    },
+    "4 illuminance": {
+        "type": "float64",
+        "comment": " Measurement of the Photometric Illuminance in Lux.",
+        "constant": ""
+    },
+    "4 variance": {
+        "type": "float64",
+        "comment": " 0 is interpreted as variance unknown",
+        "constant": ""
+    }
+}

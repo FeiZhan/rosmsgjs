@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/diagnostic_msgs/msg/DiagnosticArray.msg",
+    "#": " This message is used to send diagnostic information about the state of the robot",
+    "header": {
+        "type": "Header",
+        "comment": "for timestamp",
+        "constant": ""
+    },
+    "status": {
+        "type": "DiagnosticStatus[]",
+        "comment": " an array of components being reported on",
+        "constant": ""
+    }
+}

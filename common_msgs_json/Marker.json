@@ -1,0 +1,163 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/Marker.msg",
+    "#": [
+        " See http://www.ros.org/wiki/rviz/DisplayTypes/Marker and http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes for more information on using this message with rviz",
+        "uint8 DELETEALL=3 # TODO: enable for ROS-J, disabled for now but functionality is still there. Allows one to clear all markers in plugin",
+        "Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, ...)",
+        "Only used if the type specified has some use for them (eg. POINTS, LINE_STRIP, ...)",
+        "number of colors must either be 0 or equal to the number of points",
+        "NOTE: alpha is not yet used",
+        " NOTE: only used for text markers",
+        " NOTE: only used for MESH_RESOURCE markers"
+    ],
+    "ARROW": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "CUBE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "1"
+    },
+    "SPHERE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "2"
+    },
+    "CYLINDER": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "3"
+    },
+    "LINE_STRIP": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "4"
+    },
+    "LINE_LIST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "5"
+    },
+    "CUBE_LIST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "6"
+    },
+    "SPHERE_LIST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "7"
+    },
+    "POINTS": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "8"
+    },
+    "TEXT_VIEW_FACING": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "9"
+    },
+    "MESH_RESOURCE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "10"
+    },
+    "TRIANGLE_LIST": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "11"
+    },
+    "ADD": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "MODIFY": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "0"
+    },
+    "DELETE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": "2"
+    },
+    "header": {
+        "type": "Header",
+        "comment": " header for time/frame information",
+        "constant": ""
+    },
+    "ns": {
+        "type": "string",
+        "comment": " Namespace to place this object in... used in conjunction with id to create a unique name for the object",
+        "constant": ""
+    },
+    "id": {
+        "type": "int32",
+        "comment": " object ID useful in conjunction with the namespace for manipulating and deleting the object later",
+        "constant": ""
+    },
+    "type": {
+        "type": "int32",
+        "comment": " Type of object",
+        "constant": ""
+    },
+    "action": {
+        "type": "int32",
+        "comment": " 0 add/modify an object, 1 (deprecated), 2 deletes an object, 3 deletes all objects",
+        "constant": ""
+    },
+    "pose": {
+        "type": "geometry_msgs/Pose",
+        "comment": " Pose of the object",
+        "constant": ""
+    },
+    "scale": {
+        "type": "geometry_msgs/Vector3",
+        "comment": " Scale of the object 1,1,1 means default (usually 1 meter square)",
+        "constant": ""
+    },
+    "color": {
+        "type": "std_msgs/ColorRGBA",
+        "comment": " Color [0.0-1.0]",
+        "constant": ""
+    },
+    "lifetime": {
+        "type": "duration",
+        "comment": " How long the object should last before being automatically deleted.  0 means forever",
+        "constant": ""
+    },
+    "frame_locked": {
+        "type": "bool",
+        "comment": " If this marker should be frame-locked, i.e. retransformed into its frame every timestep",
+        "constant": ""
+    },
+    "points": {
+        "type": "geometry_msgs/Point[]",
+        "comment": "",
+        "constant": ""
+    },
+    "colors": {
+        "type": "std_msgs/ColorRGBA[]",
+        "comment": "",
+        "constant": ""
+    },
+    "text": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "mesh_resource": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "mesh_use_embedded_materials": {
+        "type": "bool",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/Pose.msg",
+    "#": " A representation of pose in free space, composed of postion and orientation. ",
+    "position": {
+        "type": "Point",
+        "comment": "",
+        "constant": ""
+    },
+    "orientation": {
+        "type": "Quaternion",
+        "comment": "",
+        "constant": ""
+    }
+}

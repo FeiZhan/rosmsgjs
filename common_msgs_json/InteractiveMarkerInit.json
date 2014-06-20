@@ -1,0 +1,29 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerInit.msg",
+    "#": [
+        " Identifying string. Must be unique in the topic namespace",
+        " that this server works on.",
+        " Sequence number.",
+        " The client will use this to detect if it has missed a subsequent",
+        " update.  Every update message will have the same sequence number as",
+        " an init message.  Clients will likely want to unsubscribe from the",
+        " init topic after a successful initialization to avoid receiving",
+        " duplicate data.",
+        " All markers."
+    ],
+    "server_id": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "seq_num": {
+        "type": "uint64",
+        "comment": "",
+        "constant": ""
+    },
+    "markers": {
+        "type": "InteractiveMarker[]",
+        "comment": "",
+        "constant": ""
+    }
+}

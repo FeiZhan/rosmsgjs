@@ -1,0 +1,45 @@
+{
+    "$file": "common_msgs/sensor_msgs/msg/RegionOfInterest.msg",
+    "#": [
+        " This message is used to specify a region of interest within an image.",
+        "",
+        " When used to specify the ROI setting of the camera when the image was",
+        " taken, the height and width fields should either match the height and",
+        " width fields for the associated image; or height = width = 0",
+        " indicates that the full resolution image was captured.",
+        " True if a distinct rectified ROI should be calculated from the \"raw\"",
+        " ROI in this message. Typically this should be False if the full image",
+        " is captured (ROI not used), and True if a subwindow is captured (ROI",
+        " used)."
+    ],
+    "x_offset": {
+        "type": "uint32",
+        "comment": " Leftmost pixel of the ROI",
+        "constant": ""
+    },
+    "": {
+        "type": "#",
+        "comment": " (0 if the ROI includes the top edge of the image)",
+        "constant": ""
+    },
+    "y_offset": {
+        "type": "uint32",
+        "comment": " Topmost pixel of the ROI",
+        "constant": ""
+    },
+    "height": {
+        "type": "uint32",
+        "comment": " Height of ROI",
+        "constant": ""
+    },
+    "width": {
+        "type": "uint32",
+        "comment": " Width of ROI",
+        "constant": ""
+    },
+    "do_rectify": {
+        "type": "bool",
+        "comment": "",
+        "constant": ""
+    }
+}

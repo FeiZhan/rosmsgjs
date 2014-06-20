@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/nav_msgs/msg/Path.msg",
+    "#": "An array of poses that represents a Path for a robot to follow",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "poses": {
+        "type": "geometry_msgs/PoseStamped[]",
+        "comment": "",
+        "constant": ""
+    }
+}

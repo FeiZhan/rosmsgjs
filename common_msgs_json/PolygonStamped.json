@@ -1,0 +1,14 @@
+{
+    "$file": "common_msgs/geometry_msgs/msg/PolygonStamped.msg",
+    "#": " This represents a Polygon with reference coordinate frame and timestamp",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "polygon": {
+        "type": "Polygon",
+        "comment": "",
+        "constant": ""
+    }
+}

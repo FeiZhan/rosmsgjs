@@ -1,0 +1,17 @@
+{
+    "$file": "common_msgs/actionlib_msgs/msg/GoalStatusArray.msg",
+    "#": [
+        " Stores the statuses for goals that are currently being tracked",
+        " by an action server"
+    ],
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "status_list": {
+        "type": "GoalStatus[]",
+        "comment": "",
+        "constant": ""
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/InteractiveMarker.msg",
+    "#": [
+        " Time/frame info.",
+        " If header.time is set to 0, the marker will be retransformed into",
+        " its frame on each timestep. You will receive the pose feedback",
+        " in the same frame.",
+        " Otherwise, you might receive feedback in a different frame.",
+        " For rviz, this will be the current 'fixed frame' set by the user.",
+        " Initial pose. Also, defines the pivot point for rotations.",
+        " Identifying string. Must be globally unique in",
+        " the topic that this message is sent through.",
+        " Short description (< 40 characters).",
+        " Scale to be used for default controls (default=1).",
+        " All menu and submenu entries associated with this marker.",
+        " List of controls displayed for this marker."
+    ],
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "pose": {
+        "type": "geometry_msgs/Pose",
+        "comment": "",
+        "constant": ""
+    },
+    "name": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "description": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "scale": {
+        "type": "float32",
+        "comment": "",
+        "constant": ""
+    },
+    "menu_entries": {
+        "type": "MenuEntry[]",
+        "comment": "",
+        "constant": ""
+    },
+    "controls": {
+        "type": "InteractiveMarkerControl[]",
+        "comment": "",
+        "constant": ""
+    }
+}

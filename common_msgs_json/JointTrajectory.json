@@ -1,0 +1,18 @@
+{
+    "$file": "common_msgs/trajectory_msgs/msg/JointTrajectory.msg",
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "joint_names": {
+        "type": "string[]",
+        "comment": "",
+        "constant": ""
+    },
+    "points": {
+        "type": "JointTrajectoryPoint[]",
+        "comment": "",
+        "constant": ""
+    }
+}

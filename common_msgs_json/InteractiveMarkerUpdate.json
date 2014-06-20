@@ -1,0 +1,61 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerUpdate.msg",
+    "#": [
+        " Identifying string. Must be unique in the topic namespace",
+        " that this server works on.",
+        " Sequence number.",
+        " The client will use this to detect if it has missed an update.",
+        " Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.",
+        " UPDATE: Incremental update to previous state. ",
+        "         The sequence number must be 1 higher than for",
+        "         the previous update.",
+        " KEEP_ALIVE: Indicates the that the server is still living.",
+        "             The sequence number does not increase.",
+        "             No payload data should be filled out (markers, poses, or erases).",
+        "Note: No guarantees on the order of processing.",
+        "      Contents must be kept consistent by sender.",
+        "Markers to be added or updated",
+        "Poses of markers that should be moved",
+        "Names of markers to be erased"
+    ],
+    "server_id": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    },
+    "seq_num": {
+        "type": "uint64",
+        "comment": "",
+        "constant": ""
+    },
+    "KEEP_ALIVE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 0"
+    },
+    "UPDATE": {
+        "type": "uint8",
+        "comment": "",
+        "constant": " 1"
+    },
+    "type": {
+        "type": "uint8",
+        "comment": "",
+        "constant": ""
+    },
+    "markers": {
+        "type": "InteractiveMarker[]",
+        "comment": "",
+        "constant": ""
+    },
+    "poses": {
+        "type": "InteractiveMarkerPose[]",
+        "comment": "",
+        "constant": ""
+    },
+    "erases": {
+        "type": "string[]",
+        "comment": "",
+        "constant": ""
+    }
+}

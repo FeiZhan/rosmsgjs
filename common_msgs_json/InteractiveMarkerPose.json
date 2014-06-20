@@ -1,0 +1,24 @@
+{
+    "$file": "common_msgs/visualization_msgs/msg/InteractiveMarkerPose.msg",
+    "#": [
+        " Time/frame info.",
+        " Initial pose. Also, defines the pivot point for rotations.",
+        " Identifying string. Must be globally unique in",
+        " the topic that this message is sent through."
+    ],
+    "header": {
+        "type": "Header",
+        "comment": "",
+        "constant": ""
+    },
+    "pose": {
+        "type": "geometry_msgs/Pose",
+        "comment": "",
+        "constant": ""
+    },
+    "name": {
+        "type": "string",
+        "comment": "",
+        "constant": ""
+    }
+}
